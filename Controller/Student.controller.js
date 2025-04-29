@@ -78,8 +78,8 @@ export const MentorOfStudents = async (req, res) => {
 
 export const getPreviousMentor = async (req, res) => {
     try {
-        const { studentId } = req.body
-        const findStudent = await Student.findById(studentId).populate("prevMentor")
+        const id = req.params.id
+        const findStudent = await Student.findById(id).populate("prevMentor")
         if (!findStudent) {
             return res.status(404).json({ message: "Student not found" })
         }

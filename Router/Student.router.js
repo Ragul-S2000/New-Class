@@ -11,7 +11,7 @@ router.post ("/addMentor",AddMentor)
 
 router.get ("/showMentor",MentorOfStudents)
 
-router.get ("/showPrevMentor",getPreviousMentor)
+router.get ("/showPrevMentor/:id",  getPreviousMentor) ,getPreviousMentor
 
 
 export default router;
