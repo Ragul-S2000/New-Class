@@ -60,12 +60,7 @@ export const MentorOfStudents = async (req, res) => {
                         _id: student._id,
                         name: student.name,
                         email: student.email,
-                        Mentors: student.Mentors.map((mentor) => {
-                            return {
-                                _id: mentor._id,
-                                name: mentor.name
-                            }
-                        })
+                        Mentors: student.Mentors.name
                     }
                 })
             }
