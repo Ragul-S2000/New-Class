@@ -49,7 +49,7 @@ export const emptyMentors = async (req,res) =>{
         if(!findEmpty){
             return res.status(400).json({message : "No empty mentors"})
         }
-        res.status(200).json({message : "Empty mentors found", data : nullMentor})
+        res.status(200).json({message : "Mentors are not assigned for these peoples", data : nullMentor})
     } catch (error) {
         res.status(500).json({error : error.message})
     }
