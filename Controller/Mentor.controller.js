@@ -44,7 +44,7 @@ export const AddStudents = async (req,res) =>{
 
 export const emptyMentors = async (req,res) =>{
     try {
-        const findEmpty = await Student.find({Mentors : {$size : 0}})
+        const findEmpty = await Student.find({Mentors: null})
         if(!findEmpty){
             return res.status(400).json({message : "No empty mentors"})
         }
